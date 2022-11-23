@@ -1,0 +1,60 @@
+.Dashboard-container {
+  background-color: var(--color-grey4);
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.left-container {
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.comp-name {
+  color: var(--color-grey1);
+  font-size: var(--font-size-150);
+}
+
+.color-brand {
+  color: var(--color-brand1);
+}
+
+.comp-slogan {
+  color: var(--color-grey1);
+  font-size: var(--font-size-200);
+  text-align: start;
+}
+
+.comp-slogan2 {
+  color: var(--color-grey2);
+  font-size: var(--font-size-100);
+}
+
+.dashboard-button {
+  all: unset;
+
+  width: 240px;
+  height: 48px;
+  text-align: center;
+
+  border-radius: var(--border2);
+
+  background-color: var(--color-brand1);
+  color: var(--color-grey1);
+  font-size: var(--font-size-100);
+
+  cursor: pointer;
+}
+
+.dashboard-button:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
