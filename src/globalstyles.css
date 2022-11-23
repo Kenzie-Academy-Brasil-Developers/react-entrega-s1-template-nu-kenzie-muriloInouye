@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --color-brand1: #fd377e;
+  --color-brand2: #e34981;
+  --color-secondary: #03b898;
+  --color-grey1: #f8f9fa;
+  --color-grey2: #e9ecef;
+  --color-grey3: #343a40;
+  --color-grey4: #212529;
+
+  --border1: 4px;
+  --border2: 8px;
+
+  --font-size-100: 1rem;
+  --font-size-085: 0.85rem;
+  --font-size-125: 1.25rem;
+  --font-size-150: 1.5rem;
+  --font-size-200: 2rem;
+}
