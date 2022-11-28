@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import Dashboard from "./components/Dashboard";
-import { ValuesList } from "./components/listMap";
 import { MainPage } from "./pages/mainPage";
 
 function App() {
@@ -9,40 +8,44 @@ function App() {
 
   const [valuesList, setValuesList] = useState(list);
 
+  const [filter, setFilter] = useState("todos");
+
+  const filteredValues = valuesList.filter((value) =>
+    filter === "todos" ? true : value.type === filter
+  );
+
   function addValue(list) {
     setValuesList([...valuesList, list]);
+  }
+
+  function removeValue(valueName) {
+    const newList = valuesList.filter(
+      (value) => value.description !== valueName
+    );
+    setValuesList(newList);
+  }
+
+  function changePage() {
+    isShown(!shown);
   }
 
   return (
     <div className="App">
       {shown ? (
-        <Dashboard render={true}>
-          <button
-            type="button"
-            className="dashboard-button"
-            onClick={() => isShown(!shown)}
-          >
-            Iniciar
-          </button>
-        </Dashboard>
+        <Dashboard changePage={changePage} />
       ) : (
-        <MainPage addValue={addValue} valuesList={valuesList} />
+        <MainPage
+          changePage={changePage}
+          addValue={addValue}
+          valuesList={filteredValues}
+          removeValue={removeValue}
+          setFilter={setFilter}
+        />
       )}
     </div>
   );
 }
 
-export const list = [
-  {
-    value: 1200.0,
-    type: "Entrada",
-    description: "salario kenzie",
-  },
-  {
-    value: 1130.12,
-    type: "Saida",
-    description: "PS5 comprado",
-  },
-];
+export const list = [];
 
 export default App;
