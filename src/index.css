@@ -1,0 +1,18 @@
+@import "./globalstyles.css";
+@import "./components/Dashboard/style.css";
+@import "./components/Filters/style.css";
+@import "./components/Form/style.css";
+@import "./components/Header/style.css";
+@import "./components/listMap/style.css";
+@import "./components/listMap/Obj/style.css";
+@import "./pages/mainPage/style.css";
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
